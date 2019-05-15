@@ -21,9 +21,10 @@ window.ontouchstart = e => {
 };
 
 window.ontouchend = e => {
-  alert('end touched')
+  
     console.log('ontouchend');  
     timer = new Date - timer
+  socket.emit("click", { x: event.clientX, y: event.clientY, timer: timer });
 };
 
 socket.on("remoteClick", data => {
