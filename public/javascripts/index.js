@@ -15,12 +15,14 @@ document.onmouseup = e => {
     timer = new Date - timer
 };
 
-document.ontouchstart = e => {
+window.ontouchstart = e => {
+  alert('touched')
     console.log('ontouchstart');    
     timer = new Date
 };
 
-document.ontouchend = e => {
+window.ontouchend = e => {
+  alert('end touched')
     console.log('ontouchend');  
     timer = new Date - timer
 };
