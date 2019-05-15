@@ -16,7 +16,6 @@ document.onmouseup = e => {
 };
 
 window.ontouchstart = e => {
-  alert('touched')
     console.log('ontouchstart');    
     timer = new Date
 };
