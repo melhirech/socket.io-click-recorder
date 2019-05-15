@@ -15,6 +15,16 @@ document.onmouseup = e => {
     timer = new Date - timer
 };
 
+document.ontouchstart = e => {
+    console.log('ontouchstart');    
+    timer = new Date
+};
+
+document.ontouchend = e => {
+    console.log('ontouchend');  
+    timer = new Date - timer
+};
+
 socket.on("remoteClick", data => {
   console.log(data);
   click.classList.remove("hidden");
